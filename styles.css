@@ -329,7 +329,7 @@ a {
   .mobile-steps {
     display: grid;
     justify-items: center;
-    gap: 22px;
+    gap: 40px;
     padding: 18px 0 8px;
   }
 
