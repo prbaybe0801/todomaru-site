@@ -1,0 +1,414 @@
+:root {
+  --teal: #2e7d7b;
+  --teal-ink: #073d45;
+  --coral: #e07856;
+  --coral-dark: #cc6548;
+  --paper: #f5f1e8;
+  --surface: #fffdf8;
+  --line: #e8ded3;
+  --muted: #727a7d;
+  --chip: #d8f0ec;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(90deg, #e5dfd4, var(--paper) 12%, var(--paper) 88%, #e5dfd4);
+  color: var(--teal-ink);
+  font-family: "Hiragino Sans", "Yu Gothic", "Yu Gothic UI", "Noto Sans JP", system-ui, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.lp-card {
+  width: min(980px, calc(100% - 28px));
+  margin: 24px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 14px 50px rgba(7, 61, 69, 0.12);
+  overflow: hidden;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 30px 32px 16px;
+}
+
+.logo-link img {
+  display: block;
+  width: clamp(150px, 25vw, 208px);
+  height: auto;
+}
+
+.top-cta,
+.signup button {
+  border: 0;
+  border-radius: 999px;
+  background: var(--coral);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: 0 13px 24px rgba(224, 120, 86, 0.18);
+  transition: background 0.16s ease, transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.top-cta {
+  padding: 18px 30px;
+  white-space: nowrap;
+}
+
+.top-cta:hover,
+.signup button:hover {
+  background: var(--coral-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 16px 30px rgba(224, 120, 86, 0.26);
+}
+
+.hero {
+  position: relative;
+  padding: 0;
+}
+
+.signup {
+  display: grid;
+  gap: 12px;
+}
+
+.hero-reference {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.signup input {
+  width: 100%;
+  min-height: 58px;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--teal-ink);
+  outline: 0;
+  padding: 0 24px;
+  font-weight: 700;
+}
+
+.signup input:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 4px rgba(46, 125, 123, 0.12);
+}
+
+.signup button {
+  min-height: 58px;
+  padding: 0 26px;
+  font-size: 1rem;
+}
+
+.microcopy {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.microcopy::before {
+  content: "🔒 ";
+}
+
+.overlay-signup {
+  position: absolute;
+  left: 4.9%;
+  top: 58.2%;
+  width: 38.2%;
+  gap: 8px;
+}
+
+.overlay-signup input,
+.overlay-signup button {
+  min-height: clamp(42px, 6.7vw, 58px);
+  opacity: 0;
+}
+
+.overlay-signup button {
+  font-size: clamp(0.72rem, 1.8vw, 1rem);
+}
+
+.asset-section {
+  margin: 0 40px;
+  border-top: 1px solid var(--line);
+}
+
+.asset-section img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mobile-asset-grid,
+.mobile-steps {
+  display: none;
+}
+
+.category-section {
+  padding: 30px 0 0;
+}
+
+.steps-section {
+  padding: 28px 0 0;
+}
+
+.final-cta {
+  padding: 38px 42px 22px;
+}
+
+.cta-panel {
+  border-radius: 18px;
+  background: var(--teal);
+  color: #fff;
+  padding: 48px 42px;
+  text-align: center;
+}
+
+.cta-panel h2 {
+  margin: 0 0 24px;
+  font-size: clamp(1.7rem, 5vw, 2.4rem);
+  line-height: 1.3;
+}
+
+.final-signup {
+  grid-template-columns: 1fr auto;
+  max-width: 500px;
+  margin: 0 auto 22px;
+}
+
+.final-signup input {
+  min-height: 52px;
+}
+
+.final-signup button {
+  min-height: 52px;
+  white-space: nowrap;
+}
+
+.cta-panel p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding: 10px 20px 30px;
+  color: #777;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 22px;
+  z-index: 10;
+  width: min(520px, calc(100% - 28px));
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: var(--teal-ink);
+  color: #fff;
+  box-shadow: 0 18px 50px rgba(7, 61, 69, 0.22);
+  transform: translateX(-50%);
+  text-align: center;
+  font-weight: 800;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 760px) {
+  .lp-card {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    padding: 16px 18px;
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(14px);
+  }
+
+  .logo-link img {
+    width: 142px;
+  }
+
+  .top-cta {
+    padding: 13px 16px;
+    font-size: 0.82rem;
+  }
+
+  .hero {
+    overflow: hidden;
+  }
+
+  .hero-reference {
+    width: 100%;
+    max-width: none;
+    transform: none;
+  }
+
+  .overlay-signup {
+    left: 5.2%;
+    top: 58.5%;
+    width: 38%;
+  }
+
+  .asset-section {
+    margin: 0 20px;
+  }
+
+  .category-section {
+    padding-top: 24px;
+    overflow: hidden;
+  }
+
+  .category-section img {
+    width: 100%;
+    max-width: 100%;
+    transform: none;
+  }
+
+  .wide-asset {
+    display: none !important;
+  }
+
+  .mobile-asset-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 16px;
+    align-items: start;
+    padding: 18px 0 8px;
+  }
+
+  .mobile-asset-grid img {
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  .mobile-steps {
+    display: grid;
+    justify-items: center;
+    gap: 22px;
+    padding: 18px 0 8px;
+  }
+
+  .mobile-steps h2 {
+    margin: 0 0 4px;
+    color: var(--teal-ink);
+    font-size: 1.75rem;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  .mobile-steps img {
+    width: min(100%, 260px);
+    max-width: 260px;
+    transform: none;
+  }
+
+  .final-cta {
+    padding: 30px 20px 18px;
+  }
+
+  .cta-panel {
+    padding: 34px 18px;
+  }
+
+  .final-signup {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    font-size: 0.78rem;
+  }
+}
+
+/* Legal pages (privacy / terms) */
+.legal {
+  padding: 40px 42px 48px;
+}
+
+.legal .back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--teal);
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.legal h1 {
+  margin: 0 0 6px;
+  font-size: clamp(1.6rem, 4vw, 2rem);
+}
+
+.legal .updated {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0 0 28px;
+}
+
+.legal h2 {
+  color: var(--teal);
+  font-size: 1.15rem;
+  margin: 32px 0 10px;
+}
+
+.legal p,
+.legal li {
+  line-height: 1.9;
+  margin: 0 0 12px;
+}
+
+.legal a {
+  color: var(--teal);
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .legal {
+    padding: 24px 20px 36px;
+  }
+}

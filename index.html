@@ -1,38 +1,80 @@
 <!doctype html>
 <html lang="ja">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>トドマル | やめたい行動をやめるためのアプリ</title>
-<meta name="description" content="トドマルは、やめたい行動を自由に登録して、衝動が来た瞬間にひと呼吸置くための習慣改善アプリです。">
-<link rel="icon" href="data:,">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="wrap">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>トドマル | その衝動、10秒だけトドマル。</title>
+    <meta
+      name="description"
+      content="トドマルは、やめたい行動の直前に10秒の余白をつくるセルフマネジメントアプリです。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="lp-card">
+      <header class="topbar">
+        <a href="#top" class="logo-link" aria-label="トドマル">
+          <img src="./assets/07-logo-header.png" alt="トドマル" />
+        </a>
+        <a class="top-cta" href="#waitlist">ウェイトリストに登録</a>
+      </header>
 
-  <header class="hero">
-    <div class="appname">TODOMARU</div>
-    <h1>トドマル</h1>
-    <p class="tagline">やめたい行動を自由に登録して、衝動が来た瞬間にひと呼吸置くための習慣改善アプリです。</p>
-  </header>
+      <section id="top" class="hero">
+        <img class="hero-reference" src="./assets/02b-hero-main-no-header.png" alt="その衝動、10秒だけトドマル。トドマルのアプリ画面とウェイトリスト登録フォーム" />
+        <form class="signup hero-signup overlay-signup" data-signup>
+            <label class="sr-only" for="hero-email">メールアドレス</label>
+            <input id="hero-email" name="email" type="email" placeholder="メールアドレスを入力" required />
+            <input type="hidden" name="_subject" value="トドマル ウェイトリスト登録" />
+            <button type="submit">無料でウェイトリストに登録</button>
+        </form>
+      </section>
 
-  <ul class="features">
-    <li><span class="dot">●</span><div><strong>行動を自由に登録</strong><br>禁煙、間食、深夜のスマホ利用など、あなたが変えたい行動を自分の言葉で登録できます。</div></li>
-    <li><span class="dot">●</span><div><strong>トドマルボタン</strong><br>衝動が湧いた瞬間にワンタップで起動。深呼吸ガイドが自動操縦の思考をいったん止めます。</div></li>
-    <li><span class="dot">●</span><div><strong>非ゼロリセット</strong><br>続けられなかった日があっても、ゼロからではなく好きな地点からやり直せます。</div></li>
-    <li><span class="dot">●</span><div><strong>端末内保存</strong><br>記録はすべて端末内に保存され、外部のサーバーには送信されません。</div></li>
-  </ul>
+      <section class="asset-section category-section" aria-labelledby="category-title">
+        <h2 id="category-title" class="sr-only">登録できる行動の例</h2>
+        <img class="wide-asset" src="./assets/08-category-row.png" alt="禁煙、過食、深夜のスマホ、連絡を控えたい人間関係" />
+        <div class="mobile-asset-grid category-mobile" aria-hidden="true">
+          <img src="./assets/09-category-smoking.png" alt="" />
+          <img src="./assets/10-category-overeating.png" alt="" />
+          <img src="./assets/11-category-late-phone.png" alt="" />
+          <img src="./assets/12-category-relationship.png" alt="" />
+        </div>
+      </section>
 
-  <div class="cta">
-    <a class="btn secondary" href="privacy.html">プライバシーポリシー</a>
-    <a class="btn secondary" href="mailto:prbaybe+todomaru@gmail.com">お問い合わせ</a>
-  </div>
+      <section class="asset-section steps-section" aria-labelledby="steps-title">
+        <h2 id="steps-title" class="sr-only">使い方はかんたん3ステップ</h2>
+        <img class="wide-asset" src="./assets/13-steps-section.png" alt="行動を登録する、衝動が来たらトドまるボタン、記録して振り返る" />
+        <div class="mobile-steps" aria-hidden="true">
+          <h2>使い方はかんたん 3ステップ</h2>
+          <img src="./assets/14-step-register.png" alt="" />
+          <img src="./assets/15-step-button.png" alt="" />
+          <img src="./assets/16-step-review.png" alt="" />
+        </div>
+      </section>
 
-  <footer>
-    &copy; 2026 トドマル ／ <a href="mailto:prbaybe+todomaru@gmail.com">prbaybe+todomaru@gmail.com</a>
-  </footer>
+      <section id="waitlist" class="final-cta">
+        <div class="cta-panel">
+          <h2>今すぐウェイトリストに登録</h2>
+          <form class="signup final-signup" data-signup>
+            <label class="sr-only" for="final-email">メールアドレス</label>
+            <input id="final-email" name="email" type="email" placeholder="メールアドレスを入力" required />
+            <input type="hidden" name="_subject" value="トドマル ウェイトリスト登録" />
+            <button type="submit">無料で登録する</button>
+          </form>
+          <p>アプリのリリース情報をいち早くお届けします。</p>
+        </div>
+      </section>
 
-</div>
-</body>
+      <footer class="footer">
+        <span>© トドマル</span>
+        <a href="./privacy.html">プライバシーポリシー</a>
+        <a href="./terms.html">利用規約</a>
+        <a href="mailto:prbaybe+todomaru@gmail.com">お問い合わせ</a>
+      </footer>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite" hidden>
+      ウェイトリストに登録しました。リリース情報をお送りします。
+    </div>
+    <script src="./script.js"></script>
+  </body>
 </html>
