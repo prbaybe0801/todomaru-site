@@ -133,22 +133,33 @@ a {
   content: "🔒 ";
 }
 
-.overlay-signup {
+.hero-signup-wrap {
   position: absolute;
   left: 4.9%;
-  top: 58.2%;
-  width: 38.2%;
-  gap: 8px;
+  top: 61.8%;
+  width: 39%;
 }
 
-.overlay-signup input,
-.overlay-signup button {
-  min-height: clamp(42px, 6.7vw, 58px);
-  opacity: 0;
+.hero-signup-wrap .signup {
+  gap: 10px;
 }
 
-.overlay-signup button {
-  font-size: clamp(0.72rem, 1.8vw, 1rem);
+.hero-signup-wrap input,
+.hero-signup-wrap button {
+  min-height: clamp(40px, 6.2vw, 58px);
+  font-size: clamp(0.75rem, 1.7vw, 1rem);
+}
+
+.hero-signup-wrap input {
+  padding: 0 clamp(14px, 2.5vw, 24px);
+}
+
+.hero-note {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: clamp(0.68rem, 1.5vw, 0.85rem);
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 .asset-section {
@@ -287,10 +298,10 @@ a {
     transform: none;
   }
 
-  .overlay-signup {
+  .hero-signup-wrap {
     left: 5.2%;
-    top: 58.5%;
-    width: 38%;
+    top: 62%;
+    width: 38.5%;
   }
 
   .asset-section {
