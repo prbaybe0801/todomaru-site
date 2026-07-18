@@ -9,6 +9,10 @@
       content="トドマルは、やめたい行動の直前に10秒の余白をつくるセルフマネジメントアプリです。"
     />
     <meta name="google-site-verification" content="xMSmZb_DUjNoIuZ_pO439msByrKfJwqjmr_NH0BtUyU" />
+    <link rel="icon" href="./assets/logo-mark.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYEZZKP1EB"></script>
@@ -20,69 +24,188 @@
     </script>
   </head>
   <body>
-    <main class="lp-card">
-      <header class="topbar">
-        <a href="#top" class="logo-link" aria-label="トドマル">
-          <img src="./assets/07-logo-header.png" alt="トドマル" />
+    <div class="page-wrap">
+
+      <header class="site-header">
+        <a class="logo" href="#top" aria-label="トドマル">
+          <img class="logo-mark" src="./assets/logo-mark.svg" alt="" width="40" height="40" />
+          <span class="logo-word">トドマル</span>
         </a>
-        <a class="top-cta" href="#waitlist">ウェイトリストに登録</a>
+        <a class="btn btn-cta" href="#waitlist">ウェイトリストに登録</a>
       </header>
 
-      <section id="top" class="hero">
-        <img class="hero-reference" src="./assets/02c-hero-main-no-form.png" alt="その衝動、10秒だけトドマル。" />
-        <div class="hero-signup-wrap">
-          <form class="signup hero-signup" data-signup>
-            <label class="sr-only" for="hero-email">メールアドレス</label>
-            <input id="hero-email" name="email" type="email" placeholder="メールアドレスを入力" required />
+      <main id="top">
+        <section class="hero">
+          <div class="hero-copy">
+            <h1>その衝動、<br />10秒だけ<br />トドマル。</h1>
+            <p>やめたい行動の直前に、<br class="br-desktop" />10秒の余白をつくる<br class="br-desktop" />セルフマネジメントアプリ。</p>
+          </div>
+
+          <div class="phone-mockup" aria-hidden="true">
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <div class="phone-notch"></div>
+                <div class="status-bar">
+                  <span>9:41</span>
+                  <span class="status-icons">
+                    <svg width="16" height="12" viewBox="0 0 16 12"><path d="M1 9L1 11L3 11L3 9Z M5 6L5 11L7 11L7 6Z M9 3L9 11L11 11L11 3Z M13 1L13 11L15 11L15 1Z" fill="#143D45"></path></svg>
+                    <svg width="15" height="11" viewBox="0 0 15 11"><path d="M7.5 1C10.5 1 13 2.5 14.5 4.5L13 6C11.8 4.3 9.8 3.2 7.5 3.2C5.2 3.2 3.2 4.3 2 6L0.5 4.5C2 2.5 4.5 1 7.5 1Z" fill="#143D45"></path></svg>
+                    <svg width="24" height="12" viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="2.5" stroke="#143D45"></rect><rect x="2" y="2" width="15" height="8" rx="1" fill="#143D45"></rect><rect x="21" y="4" width="2" height="4" rx="1" fill="#143D45"></rect></svg>
+                  </span>
+                </div>
+                <div class="screen-title-row">
+                  <span class="screen-title">ホーム</span>
+                  <svg class="settings-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2.5" stroke="#8C8C8C" stroke-width="1.5"></circle><path d="M10 2V4M10 16V18M2 10H4M16 10H18M4.2 4.2L5.6 5.6M14.4 14.4L15.8 15.8M4.2 15.8L5.6 14.4M14.4 5.6L15.8 4.2" stroke="#8C8C8C" stroke-width="1.5" stroke-linecap="round"></path></svg>
+                </div>
+
+                <div class="habit-card">
+                  <div class="habit-card-head">
+                    <div class="habit-card-icon icon-mint">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 17c0-3 2-4 2-6.5S5.5 6 7 4c0 2 2 2 2 4.5S7 12 7 14c0 1.5 1 2 2 2h10c1 0 1-1.5 0-2-1 0-1-1.5 1-1.5" stroke="#2E7D7B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </div>
+                    <span class="habit-card-title">禁煙</span>
+                  </div>
+                  <div class="habit-card-stat"><span>今日の進捗</span><span class="stat-value">6/10 回</span></div>
+                  <div class="progress-track"><div class="progress-fill" style="width:60%"></div></div>
+                  <div class="habit-card-week">今週の記録 <span class="stat-value">4日</span></div>
+                </div>
+
+                <div class="habit-card">
+                  <div class="habit-card-head">
+                    <div class="habit-card-icon icon-peach">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 11C5 8 8 6 12 6C16 6 19 8 19 11" stroke="#E07856" stroke-width="1.6" stroke-linecap="round"></path><rect x="4" y="11" width="16" height="7" rx="2" fill="#E07856"></rect><circle cx="12" cy="4" r="1.6" fill="#E07856"></circle></svg>
+                    </div>
+                    <span class="habit-card-title">過食をやめる</span>
+                  </div>
+                  <div class="habit-card-stat"><span>今日の進捗</span><span class="stat-value">5/10 回</span></div>
+                  <div class="progress-track"><div class="progress-fill" style="width:50%"></div></div>
+                  <div class="habit-card-week">今週の記録 <span class="stat-value">3日</span></div>
+                </div>
+
+                <div class="main-action-row">
+                  <div class="main-action">
+                    <div class="main-action-pulse"></div>
+                    <div class="main-action-button">トドマル</div>
+                  </div>
+                </div>
+
+                <div class="tab-bar">
+                  <div class="tab-item tab-active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 11L12 4L21 11" stroke="#2E7D7B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5 10V19H19V10" stroke="#2E7D7B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    <span>ホーム</span>
+                  </div>
+                  <div class="tab-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 19V13M12 19V6M19 19V10" stroke="#8C8C8C" stroke-width="1.8" stroke-linecap="round"></path></svg>
+                    <span>記録</span>
+                  </div>
+                  <div class="tab-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5" stroke="#8C8C8C" stroke-width="1.8"></circle><path d="M4 20C4 16 7.5 14 12 14C16.5 14 20 16 20 20" stroke="#8C8C8C" stroke-width="1.8" stroke-linecap="round"></path></svg>
+                    <span>プロフィール</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="cta-row hero-cta" data-signup>
+            <label class="visually-hidden" for="hero-email">メールアドレス</label>
+            <input id="hero-email" type="email" name="email" required placeholder="メールアドレスを入力" />
             <input type="hidden" name="_subject" value="トドマル ウェイトリスト登録" />
-            <button type="submit">無料でウェイトリストに登録</button>
+            <button type="submit" class="btn btn-cta">無料でウェイトリストに登録</button>
           </form>
-          <p class="hero-note">無料で事前登録。リリース情報だけをお届けします。</p>
-        </div>
-      </section>
+        </section>
 
-      <section class="asset-section category-section" aria-labelledby="category-title">
-        <h2 id="category-title" class="sr-only">登録できる行動の例</h2>
-        <img class="wide-asset" src="./assets/08-category-row.png" alt="禁煙、過食、深夜のスマホ、連絡を控えたい人間関係" />
-        <div class="mobile-asset-grid category-mobile" aria-hidden="true">
-          <img src="./assets/09-category-smoking.png" alt="" />
-          <img src="./assets/10-category-overeating.png" alt="" />
-          <img src="./assets/11-category-late-phone.png" alt="" />
-          <img src="./assets/12-category-relationship.png" alt="" />
-        </div>
-      </section>
+        <hr class="divider" />
 
-      <section class="asset-section steps-section" aria-labelledby="steps-title">
-        <h2 id="steps-title" class="sr-only">使い方はかんたん3ステップ</h2>
-        <img class="wide-asset" src="./assets/13-steps-section.png" alt="行動を登録する、衝動が来たらトドまるボタン、記録して振り返る" />
-        <div class="mobile-steps" aria-hidden="true">
+        <section class="habits">
+          <h2 class="visually-hidden">やめたい行動を選ぶ</h2>
+          <div class="habit-grid">
+            <div class="habit-item">
+              <div class="habit-icon icon-mint">
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none"><rect x="3" y="10" width="14" height="4" rx="1" fill="#FFFFFF" stroke="#2E7D7B" stroke-width="1.2"></rect><rect x="3" y="10" width="4" height="4" fill="#E07856"></rect><circle cx="19" cy="12" r="1.4" fill="#2E7D7B"></circle><path d="M3 3L20 20M20 3L3 20" stroke="#E07856" stroke-width="2" stroke-linecap="round"></path></svg>
+              </div>
+              <span class="habit-label">禁煙</span>
+            </div>
+            <div class="habit-item">
+              <div class="habit-icon icon-peach">
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none"><path d="M5 11C5 8 8 6 12 6C16 6 19 8 19 11" stroke="#E07856" stroke-width="1.6" stroke-linecap="round"></path><rect x="4" y="11" width="16" height="7" rx="2" fill="#E07856"></rect><circle cx="12" cy="4" r="1.6" fill="#E07856"></circle><circle cx="8" cy="9" r="1.4" fill="#FFFFFF"></circle><circle cx="12" cy="8" r="1.4" fill="#FFFFFF"></circle><circle cx="16" cy="9" r="1.4" fill="#FFFFFF"></circle></svg>
+              </div>
+              <span class="habit-label">過食</span>
+            </div>
+            <div class="habit-item">
+              <div class="habit-icon icon-yellow">
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none"><rect x="6" y="2" width="12" height="20" rx="3" stroke="#143D45" stroke-width="1.6"></rect><path d="M14 6C12.5 6.8 11.6 8.4 11.6 10.2C11.6 12.9 13.8 15.1 16.5 15.1C17.3 15.1 18 14.9 18.7 14.6C17.9 17.1 15.6 18.9 12.8 18.9C9.4 18.9 6.6 16.1 6.6 12.7C6.6 9.5 9 6.9 12.1 6.5C12.7 6.4 13.4 6.3 14 6Z" fill="#143D45"></path></svg>
+              </div>
+              <span class="habit-label">深夜のスマホ</span>
+            </div>
+            <div class="habit-item">
+              <div class="habit-icon icon-mint">
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="8" r="2.6" stroke="#2E7D7B" stroke-width="1.5"></circle><circle cx="16" cy="8" r="2.6" stroke="#2E7D7B" stroke-width="1.5"></circle><path d="M3 19C3 15.5 5.2 13.5 8 13.5C10.8 13.5 13 15.5 13 19" stroke="#2E7D7B" stroke-width="1.5" stroke-linecap="round"></path><path d="M12 19C12 16 14 14 16.5 14C19 14 21 16.2 21 19" stroke="#2E7D7B" stroke-width="1.5" stroke-linecap="round"></path></svg>
+              </div>
+              <span class="habit-label">連絡を控えたい<br />人間関係</span>
+            </div>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section class="steps">
           <h2>使い方はかんたん 3ステップ</h2>
-          <img src="./assets/14-step-register.png" alt="" />
-          <img src="./assets/15-step-button-v2.png" alt="" />
-          <img src="./assets/16-step-review.png" alt="" />
-        </div>
-      </section>
+          <div class="step-grid">
+            <div class="step-card">
+              <div class="step-icon-box">
+                <svg width="52" height="52" viewBox="0 0 24 24" fill="none"><rect x="5" y="4" width="14" height="17" rx="2" stroke="#143D45" stroke-width="1.6"></rect><rect x="9" y="2.5" width="6" height="3" rx="1" fill="#143D45"></rect><path d="M8 10L10 12L14 8M8 14.5L10 16.5L14 12.5" stroke="#2E7D7B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="18" cy="18" r="4" fill="#2E7D7B"></circle><path d="M18 16.3V19.7M16.3 18H19.7" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round"></path></svg>
+                <div class="step-badge">1</div>
+              </div>
+              <div class="step-copy">
+                <div class="step-title">行動を登録する</div>
+                <div class="step-desc">やめたい行動を選んで、目標を設定します。</div>
+              </div>
+            </div>
+            <div class="step-card">
+              <div class="step-icon-box">
+                <div class="step-mini-action">トドマル</div>
+                <div class="step-badge">2</div>
+              </div>
+              <div class="step-copy">
+                <div class="step-title">衝動が来たらトドまるボタン</div>
+                <div class="step-desc">衝動の瞬間にボタンを押して、10秒の余白をつくります。</div>
+              </div>
+            </div>
+            <div class="step-card">
+              <div class="step-icon-box">
+                <svg width="52" height="52" viewBox="0 0 24 24" fill="none"><rect x="4" y="14" width="3" height="6" fill="#2E7D7B"></rect><rect x="9" y="10" width="3" height="10" fill="#2E7D7B"></rect><rect x="14" y="6" width="3" height="14" fill="#2E7D7B"></rect><circle cx="18.5" cy="17.5" r="3.5" fill="#8C8C8C" opacity="0.3"></circle><path d="M18.5 14V17.5L21 19" stroke="#2E7D7B" stroke-width="1.4" stroke-linecap="round"></path></svg>
+                <div class="step-badge">3</div>
+              </div>
+              <div class="step-copy">
+                <div class="step-title">記録して振り返る</div>
+                <div class="step-desc">記録を見える化して、自分の変化を確認します。</div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <section id="waitlist" class="final-cta">
-        <div class="cta-panel">
+        <section id="waitlist" class="closing-cta">
+          <svg class="closing-deco" width="220" height="220" viewBox="0 0 220 220" aria-hidden="true"><circle cx="110" cy="90" r="70" fill="#FFFFFF"></circle><ellipse cx="110" cy="175" rx="90" ry="12" fill="#FFFFFF"></ellipse></svg>
           <h2>今すぐウェイトリストに登録</h2>
-          <form class="signup final-signup" data-signup>
-            <label class="sr-only" for="final-email">メールアドレス</label>
-            <input id="final-email" name="email" type="email" placeholder="メールアドレスを入力" required />
+          <form class="cta-row" data-signup>
+            <label class="visually-hidden" for="closing-email">メールアドレス</label>
+            <input id="closing-email" type="email" name="email" required placeholder="メールアドレスを入力" />
             <input type="hidden" name="_subject" value="トドマル ウェイトリスト登録" />
-            <button type="submit">無料で登録する</button>
+            <button type="submit" class="btn btn-cta">無料で登録する</button>
           </form>
-          <p>アプリのリリース情報をいち早くお届けします。</p>
-        </div>
-      </section>
+          <p class="closing-caption">アプリのリリース情報をいち早くお届けします。</p>
+        </section>
+      </main>
 
-      <footer class="footer">
+      <footer class="site-footer">
         <span>© トドマル</span>
         <a href="./privacy.html">プライバシーポリシー</a>
         <a href="./terms.html">利用規約</a>
         <a href="mailto:prbaybe+todomaru@gmail.com">お問い合わせ</a>
       </footer>
-    </main>
+
+    </div>
 
     <div class="toast" role="status" aria-live="polite" hidden>
       ウェイトリストに登録しました。リリース情報をお送りします。
