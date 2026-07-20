@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prbaybe0801.github.io/todomaru-site/sitemap.xml
